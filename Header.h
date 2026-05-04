@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <map>
 #include <string>
 #include <vector>
 
@@ -72,12 +73,15 @@ public:
 		else label = rawText;
 		
 	}
-
+	std::string getText() const   { return label; }
+	bool isParagraphEmpty() const {
+		return isEmpty;
+	}
 };
 class DocxChecker
 {
 private:
-	std::vector<Paragraph> paragraphs;
+	std::map<std::string,Style> standards;
 	pugi::xml_document stylesDoc;
 public:
 	DocxChecker();
