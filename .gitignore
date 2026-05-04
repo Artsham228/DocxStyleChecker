@@ -3,6 +3,6 @@ x64/
 Debug/
 Release/
 *.user
-.docx/
-.zip/
-.xml/
+.docx
+.zip
+.xml
